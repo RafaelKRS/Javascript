@@ -162,7 +162,7 @@
         </div>
     </div>
 
-    <!-- book a table Section  -->
+    <!-- Repositorio    https://github.com/mpramos/JSE8-ANGULAR.git  --> 
     <div class="container-fluid has-bg-overlay text-center text-light has-height-lg middle-items" id="book-table">
         <div class="">
             <h2 class="section-title mb-5">AGENDA UNA RESERVACION</h2>
@@ -172,6 +172,29 @@
             <div id="salida" class="display-4"></div>
         </div>
     </div>
+
+    <form class="container-fluid has-bg-overlay text-center text-light has-height-lg middle-items" action="/my-handling-form-page" method="post">
+        <ul>
+          <label class="section-title mb-5" for="name">Registro</label>  
+          <li>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="user_name" />
+          </li>
+          <li>
+            <label for="mail">Correo electrónico:</label>
+            <input type="email" id="mail" name="user_email" />
+          </li>
+          <li>
+            <label for="msg">Mensaje:</label>
+            <textarea id="msg" name="user_message"></textarea>
+          </li>
+
+          <li class="button">
+            <button type="submit">Envíe su mensaje</button>
+          </li>
+      
+        </ul>
+      </form>
 
     
 

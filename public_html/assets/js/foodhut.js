@@ -59,19 +59,19 @@ function initMap() {
     alert (userAdjective3);
 
     
-    // todo=todo+"Reserva a nombre: "+userAdjective+" con "+userAdjective1+' invitados, en la fecha '+userAdjective2+' a horas '+userAdjective3+" <br>  \n"
+    todo=todo+"\nReserva a nombres: "+userAdjective+" con "+userAdjective1+' invitados, en la fecha '+userAdjective2+' a horas '+userAdjective3
     // todo = `${todo}Reserva 
 
     //                 nombre`
 
-    parrafo1.textContent="Reserva"
+    /*parrafo1.textContent="Reserva"
     parrafo2.textContent="nombre"
     
     salidaVar.appendChild(parrafo1)
-    salidaVar.appendChild(parrafo2)
+    salidaVar.appendChild(parrafo2)*/
     window.confirm(todo)
 
-    //salidaVar.textContent= todo
+    salidaVar.textContent= todo
 
 }
 
