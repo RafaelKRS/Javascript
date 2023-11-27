@@ -28,7 +28,7 @@
       margin-bottom: 10px;
     }
     p {
-      font-size: 1.1rem;
+      font-size: 1rem;
       margin-bottom: 15px;
     }
     form label {
@@ -102,9 +102,9 @@
 
   <script>
     document.getElementById('reservaBtn').addEventListener('click', function() {
-      var nombre = prompt('Ingresa tu nombre:');
-      var email = prompt('Ingresa tu correo electrónico:');
-      var telefono = prompt('Ingresa tu número de teléfono:');
+      let nombre = prompt('Ingresa tu nombre:');
+      let email = prompt('Ingresa tu correo electrónico:');
+      let telefono = prompt('Ingresa tu número de teléfono:');
       
       document.getElementById('mostrarNombre').innerText = nombre;
       document.getElementById('mostrarEmail').innerText = email;
