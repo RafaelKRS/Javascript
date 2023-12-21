@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const registros = [];
-  const reservas = [];
-  const comidasContainer = document.querySelector('.comidas-container');
-  const listaRegistros = document.getElementById('registros');
-  const listaReservas = document.getElementById('reservas');
-  const registroForm = document.getElementById('registroForm');
-  const reservaBtn = document.getElementById('reservaBtn');
-  const datosReserva = document.getElementById('datosReserva');
+  let registros = [];
+  let reservas = [];
+  let comidasContainer = document.querySelector('.comidas-container');
+  let listaRegistros = document.getElementById('registros');
+  let listaReservas = document.getElementById('reservas');
+  let registroForm = document.getElementById('registroForm');
+  let reservaBtn = document.getElementById('reservaBtn');
+  let datosReserva = document.getElementById('datosReserva');
 
-  const comidas = [
+  let comidas = [
     { nombre: 'Silpancho', imagen: 'imgs/silpancho.jpg' },
     { nombre: 'Salteñas', imagen: 'imgs/saltenas.jpg' },
     { nombre: 'Anticuchos', imagen: 'imgs/anticuchos.jpg' },
@@ -19,15 +19,15 @@ document.addEventListener('DOMContentLoaded', function() {
   ];
 
   comidas.forEach(comida => {
-    const divComida = document.createElement('div');
+    let divComida = document.createElement('div');
     divComida.classList.add('comidas');
 
-    const imgComida = document.createElement('img');
+    let imgComida = document.createElement('img');
     imgComida.src = comida.imagen;
     imgComida.alt = comida.nombre;
     imgComida.classList.add('comida-img');
 
-    const pComida = document.createElement('p');
+    let pComida = document.createElement('p');
     pComida.textContent = comida.nombre;
 
     divComida.appendChild(imgComida);
@@ -38,12 +38,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
   //búsqueda
   document.getElementById('busqueda').addEventListener('input', function() {
-    const filtro = this.value.toLowerCase();
-    const comidas = document.querySelectorAll('.comidas');
+    let filtro = this.value.toLowerCase();
+    let comidas = document.querySelectorAll('.comidas');
 
     comidas.forEach(comida => {
-      const nombre = comida.querySelector('p').textContent.toLowerCase();
-      const coincide = nombre.includes(filtro);
+      let nombre = comida.querySelector('p').textContent.toLowerCase();
+      let coincide = nombre.includes(filtro);
 
       if (coincide) {
         comida.style.display = 'block';
@@ -57,11 +57,11 @@ document.addEventListener('DOMContentLoaded', function() {
   registroForm.addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const nombre = this.nombre.value;
-    const email = this.email.value;
-    const telefono = this.telefono.value;
+    let nombre = this.nombre.value;
+    let email = this.email.value;
+    let telefono = this.telefono.value;
 
-    const registro = {
+    let registro = {
       nombre,
       email,
       telefono
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function mostrarRegistros() {
     listaRegistros.innerHTML = '';
     registros.forEach(registro => {
-      const li = document.createElement('li');
+      let li = document.createElement('li');
       li.innerHTML = `
         <p>Nombre: ${registro.nombre}</p>
         <p>Correo electrónico: ${registro.email}</p>
@@ -87,11 +87,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
   //reserva
   reservaBtn.addEventListener('click', function() {
-    const nombre = prompt('Ingresa tu nombre:');
-    const email = prompt('Ingresa tu correo electrónico:');
-    const telefono = prompt('Ingresa tu número de teléfono:');
+    let nombre = prompt('Ingresa tu nombre:');
+    let email = prompt('Ingresa tu correo electrónico:');
+    let telefono = prompt('Ingresa tu número de teléfono:');
 
-    const reserva = {
+    let reserva = {
       nombre,
       email,
       telefono
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function mostrarReservas() {
     listaReservas.innerHTML = '';
     reservas.forEach(reserva => {
-      const li = document.createElement('li');
+      let li = document.createElement('li');
       li.innerHTML = `
         <p>Nombre: ${reserva.nombre}</p>
         <p>Correo electrónico: ${reserva.email}</p>
