@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Restaurante Boliviano</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+</head>
+<body>
+  <header>
+    <div class="header-upper">
+      <h1>Restaurante Boliviano</h1>
+      <p>¡Bienvenido a nuestro restaurante! Disfruta nuestra sabrosa comida Boliviana.</p>
+    </div>
+    <div class="header-lower">
+      <input type="text" id="busqueda" placeholder="Buscar comida">
+    </div>
+  </header>
+  
+  <main>
+    <section class="comidas-container">
+     
+    </section>
+
+    <section id="datosReserva">
+      <h2>Datos de registro:</h2>
+      <ul id="registros"></ul>
+    </section>
+
+    <section id="reservasList">
+      <h2>Reservas:</h2>
+      <ul id="reservas"></ul>
+    </section>
+    
+    <form id="registroForm">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+      
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" required>
+      
+      <button type="submit">Registrarse</button>
+
+      <button id="reservaBtn">Reservar</button>
+    </form>
+    
+    
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
